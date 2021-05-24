@@ -17,10 +17,11 @@ const images = [
   ];
 
 const listEl = document.querySelector('#gallery');
-
+const arrayElements = [];
 [...images].forEach(el => {
-    listEl.insertAdjacentHTML("afterbegin", `<li><img src=${el.url} alt="${el.alt}" width=250px height=150px></li>`)
+    arrayElements.push(`<li><img src=${el.url} alt="${el.alt}" width=250px height=150px></li>`);
 });
+listEl.insertAdjacentHTML('afterbegin', arrayElements.join(''))
 listEl.style.display = 'flex';
 listEl.style.listStyle = 'none';
 const itemsEl = document.querySelectorAll('li');
