@@ -18,8 +18,11 @@ const images = [
 
 const listEl = document.querySelector('#gallery');
 
-const aaa = [...images].forEach(el => {
-    listEl.insertAdjacentHTML("afterbegin", `<li><img src=${el.url} alt="${el.alt}" width=768px></li>`)
-})
-listEl.classList.add('stil')
-stil.style.display = 'flex';
+[...images].forEach(el => {
+    listEl.insertAdjacentHTML("afterbegin", `<li><img src=${el.url} alt="${el.alt}" width=250px height=150px></li>`)
+});
+listEl.style.display = 'flex';
+listEl.style.listStyle = 'none';
+const itemsEl = document.querySelectorAll('li');
+[...itemsEl].forEach(el => {
+  el.style.paddingRight = '50px';});

@@ -1,13 +1,7 @@
-const listEl = document.querySelectorAll('#categories .item');
-console.log(`В списке ${listEl.length} категории.`);
-const listCountEl = document.querySelectorAll('.item ul li') 
+const quantityItemsEl = document.querySelectorAll('.item') 
+console.log(`В списке ${quantityItemsEl.length} категории.`)
 
-// const listTitleEl = document.querySelectorAll('h2')
-// const listTitleText = listTitleEl.forEach(element => console.log(element.textContent));
-const listTitleEl = document.querySelectorAll('.item h2') 
-listTitleEl.forEach(element => {
-    console.log(element.textContent);  
+quantityItemsEl.forEach(el => {
+console.log(`Категория: ${el.querySelector('h2').textContent} 
+Количество элементов: ${el.querySelectorAll('ul li').length}`);
 });
-
-console.log(listCountEl)
-listCountEl.forEach(element => console.log(`В списке ${element.length} категории.`))
