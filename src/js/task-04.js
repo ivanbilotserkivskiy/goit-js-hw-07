@@ -1,13 +1,13 @@
 let countValue = 0;
-const countButtonsEl = document.querySelectorAll('button');
-const countEl = document.querySelector('#value');
+const ButtonsEl = document.querySelectorAll('button');
+const valueEl = document.querySelector('#value');
 function increment() {
     countValue+=1;
-    countEl.textContent=countValue;
+    valueEl.textContent=countValue;
 };
 function decrement() {
     countValue -=1;
-    countEl.textContent=countValue;
+    valueEl.textContent=countValue;
 };
-countButtonsEl[0].addEventListener('click', decrement);
-countButtonsEl[1].addEventListener('click', increment);
+ButtonsEl[0].addEventListener('click', decrement);
+ButtonsEl[1].addEventListener('click', increment);
